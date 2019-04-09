@@ -1,0 +1,24 @@
+<h3>
+    {{viewTitle}}
+</h3>
+<form action="/user" method="POST" autocomplete="off">
+    <div style="padding-bottom: 15px">
+        <label>First Name</label>
+        <input type = "text" name="firstName" placeholder="First Name" value="{{name.firstName}}">
+        <br>
+        <div style="font-size:10pt; color:crimson; padding-left: 10px">
+            {{name.firstnameError}}
+        </div>
+    </div>
+    <div style="padding-bottom: 15px">
+        <label>Last Name</label>
+        <input type = "text" name="lastName" placeholder="Last Name" value="{{name.lastName}}">
+        <div style="font-size:10pt;color:crimson; padding-left: 10px">
+            {{name.lastnameError}}
+        </div>
+    </div>
+    <div>
+        <button type = "submit" class="btn">Submit</button>
+        <a href="user/list">View All Names</a>
+    </div>
+</form>
